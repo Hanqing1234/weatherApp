@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Weather</title>
+    <link rel="icon" href="/imgs/icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/style.css" />
+    
+</head>
+
+
+<body onload="myFunction(),getLocation()">
+    <div id="loading"></div>
+    <div class="cont">
+        <div class="title">
+            <h1>🌦️ Weather</h1>
+        </div>
+    </div>
+    <div class="two">
+        <div class="card">
+            <div class="search">
+                <input type="text" class="search-bar" placeholder="Search" />
+                <button>
+                    Search
+                </button>
+            </div>
+            <div class="weather loading">				
+                <h2 id="city">Weather in Toronto</h2>
+                <h1 id="temperature">21°C</h1>
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/04d.png" alt="" id="icon" />
+                    <div id="description">Cloudy</div>
+                </div>
+                <div class="other">
+                    <div id="humidity"></div>
+                    <br>
+                    <div id="feels_like"></div>                                      
+                </div>
+            </div>
+        </div>
+        <div class="card2">
+            <div id="map"></div>
+        </div>     
+    </div>
+   
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcrnEHZIyO1ktAHryfO-8CGRghfctI5cQ&callback=initMap">
+</script>
+
+    <script src="js/script.js" defer></script>
+   
+</body>
